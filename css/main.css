@@ -1,0 +1,527 @@
+/* ------ Спецификация ------ */
+
+body {
+	font: 400 15px 'Roboto', sans-serif;
+	background-color: #fff;
+	color: #000;
+	padding: 0;
+	margin: 0;
+}
+
+div, form, p, a, span, button, ul, li {
+	box-sizing: border-box;
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+	margin: 0;
+	line-height: 1.6em;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, button {
+	letter-spacing: 0.025em;
+}
+
+h1 {
+	font-size: 45px;
+	color: #1b3bde;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 19px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 17px;
+}
+
+a {
+	font-weight: 300;
+	color: #000;
+	text-decoration: none;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
+a, button {
+	transition: all 0.5s ease;
+}
+
+input, input:hover, input:focus, input:active {
+	outline: none;
+	border: 1px solid transparent;
+}
+
+input::-webkit-input-placeholder {
+	color: #c4c5c5;
+}
+
+input::-moz-placeholder {
+	color: #c4c5c5;
+}
+
+input:-moz-placeholder {
+	color: #c4c5c5;
+}
+
+input:-ms-input-placeholder {
+	color: #c4c5c5;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #000;
+}
+
+input:focus::-moz-placeholder {
+    color: #000;
+}
+
+input:focus:-moz-placeholder {
+    color: #000;
+}
+
+input:focus:-ms-input-placeholder {
+    color: #000;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.justify-content-around {
+	justify-content: space-around;
+}
+
+.justify-content-end {
+	justify-content: flex-end;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+/* ---- Первый экран ---- */
+
+.hat {
+	box-shadow: inset 0px -2px 9px 0px rgba(0, 0, 0, 0.16);
+	padding: 17px 0 22px;
+}
+
+.logo i {
+	width: 50px;
+    height: 50px;
+	font-size: 25px;
+	color: #fff;
+	line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #1b3bde;
+}
+
+.logo__name {
+	font-size: 14.55px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-left: 10px;
+	color: #1b3bde;
+}
+
+.logo__name span {
+	display: block;
+	font-size: 20.21px;
+}
+
+.menu {
+	margin-left: 87px;
+}
+
+.menu__link {
+	font-size: 13px;
+	border-radius: 5px;
+	padding: 7px 20px;
+}
+
+.menu__link:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.phone {
+	font-size: 15px;
+	font-weight: 900;
+	margin-left: auto;
+}
+
+.offer {
+	padding: 88px 0 130px;
+	background: #f0f7f7 url(../img/first_bg.png) no-repeat center top / cover;
+}
+
+.workshop {
+	max-width: 540px;
+	width: 100%;
+	text-align: center;
+}
+
+.workshop__intro {
+	font-size: 16px;
+	margin-bottom: 15px;
+	letter-spacing: 0.03em;
+}
+
+.workshop__when {
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	width: 148px;
+	height: 27px;
+	line-height: 27px;
+	color: #fff;
+	background-color: #000;
+	border-radius: 3px;
+	margin: 26px auto 0;
+}
+
+.form {
+	max-width: 333px;
+	width: 100%;
+	padding: 36px 28px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0px 13px 98px 0px rgba(0, 0, 0, 0.24);
+}
+
+.form__title {
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+.form__subtitle {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.form__input {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 11px;
+}
+
+.form__input:focus {
+	border-bottom: 1px solid #000;
+}
+
+.form__btn {
+	font-size: 16px;
+	width: 100%;
+	height: 57px;
+	background-color: #4acd4d;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.form__confidential {
+	font-size: 12px;
+	margin-top: 17px;
+	text-align: center;
+	color: #d5d5d5;
+}
+
+.problem {
+	padding: 124px 0 120px;
+}
+
+/* ----- Секция "Знаете ли вы" ---- */
+
+.stats {
+	margin-bottom: 64px;
+}
+
+.author {
+	width: 469px;
+	border-radius: 5px;
+	box-shadow: 0px 13px 98px 0px rgba(0, 0, 0, 0.24);
+	background-color: #9d6bdc;
+	padding: 40px 20px 47px 56px;
+	color: #fff; 
+}
+
+.author__name {
+	margin-bottom: 9px;
+}
+
+.author__line {
+	margin-bottom: -2px;
+	font-size: 15px;
+	letter-spacing: 0.05em;
+}
+
+.author__digits {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.author__element:not(:last-child) {
+	margin-right: 30px;
+}
+
+.author__icon {
+	font-size: 39px;
+	font-weight: 900;
+	margin-right: 15px;
+}
+
+.author__text {
+	font-size: 13px;
+	margin-top: -4px;
+}
+
+.author__text_long {
+	width: 83px;
+}
+
+.author__text_short {
+	width: 48px;
+}
+
+.author__link {
+	font-size: 14px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.ask_right {
+	width: 578px;
+	padding-right: 126px;
+}
+
+.ask_left {
+	width: 573px;
+	padding-left: 129px;
+}
+
+.ask__title {
+	margin-bottom: 17px;
+}
+
+.ask__text {
+	letter-spacing: 0.04em;
+}
+
+.ask__text span{
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.income {
+	width: 469px;
+	border-radius: 5px;
+	box-shadow: 0px 13px 98px 0px rgba(0, 0, 0, 0.24);
+	background-color: #f7e23b;
+	padding: 95px 0;
+	text-align: center;
+}
+
+.income__digit {
+	font-size: 43px;
+	font-weight: 900;
+}
+
+.income__line {
+	font-size: 21px;
+	margin-top: -4px;
+}
+
+/* ----- Секция "Я покажу" ---- */
+
+.show {
+	padding: 101px 0;
+	background: #f0f7f7 url(../img/first_bg.png) no-repeat center top / cover;
+}
+
+.profit {
+	margin-top: 75px;
+}
+
+.profit__number {
+	width: 82px;
+	height: 82px;
+	border-radius: 5px;
+	margin: 0 auto;
+	font-size: 26px;
+	font-weight: 900;
+	background-color: #1b3bde;
+	color: #fff;
+	line-height: 82px;
+	text-align: center;
+}
+
+.profit__desc {
+	width: 225px;
+	margin: 17px 0 0 33px;
+}
+
+.profit__title {
+	color: #1b3bde;
+}
+
+.profit__text {
+	font-size: 15px;
+	margin-top: 10px;
+	line-height: 1.5em;
+}
+
+/* ----- Секция "Если вы" ---- */
+
+.if-you {
+	padding: 92px 0 102px;
+}
+
+.condition {
+	margin-top: 67px;
+}
+
+.condition__item {
+	max-width: 348px;
+	width: 100%;
+    padding: 66px 42px;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+    box-shadow: 0px 13px 98px 0px rgba(0, 0, 0, 0.24);
+}
+
+.condition__item i {
+	font-size: 42px;
+}
+
+.condition__item_green {
+	background-color: #4acc4d;
+	padding: 66px 88px;
+}
+
+.condition__item_blue {
+	background-color: #4ac7cc;
+	box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.22);
+}
+
+.condition__item_pink {
+	background-color: #dc6b83;
+}
+
+.condition__title {
+	margin-top: 20px;
+	line-height: 1.0em;
+}
+
+.booking {
+	padding: 97px 0 107px;
+	background: #f0f7f7 url(../img/last_bg.png) no-repeat center top / cover;
+}
+
+/* ----- Секция "Забронируйте участие" ---- */
+
+.webinar {
+	max-width: 664px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.webinar__intro {
+	font-size: 16px;
+	margin-bottom: 30px;
+	letter-spacing: 0.03em;
+}
+
+.webinar__info {
+	margin-top: 28px;
+	text-align: center;
+}
+
+.webinar__detail {
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 0.027em;
+}
+
+.webinar__detail:not(:last-child) {
+	margin-right: 20px;
+}
+
+/* ----- Footer ---- */
+
+.footer {
+	padding: 24px 0 22px;
+}
+
+.footer-details {
+	
+}
+
+.footer-details__copyright {
+	font-size: 12px;
+	margin-left: 162px;
+}
+
+.footer-details__policy {
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+
+.footer-details__policy:hover {
+	border-bottom-color: transparent;
+}
